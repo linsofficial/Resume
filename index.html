@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
+    <!-- SEO Optimization -->
     <title>Resume Builder by LINS | Professional Resume Creator</title>
     <meta name="description" content="Create professional resumes instantly with Resume Builder by LINS. Choose premium templates, customize colors, export to PDF, PNG, and JPG, and build job-ready resumes directly from your browser.">
     <meta name="keywords" content="resume builder,resume maker,cv builder,cv maker,professional resume,resume creator,job resume,resume templates,pdf resume,resume generator,resume design,cv creator,online resume,resume export,lins io">
@@ -11,6 +12,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://example.com/resume-builder">
     
+    <!-- PWA / Mobile Tags -->
     <meta name="theme-color" content="#0f172a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,6 +20,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="LINS Resume">
     
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="Resume Builder by LINS | Professional Resume Creator">
     <meta property="og:description" content="Create professional resumes instantly with Resume Builder by LINS. Choose premium templates, customize colors, export to PDF, PNG, and JPG, and build job-ready resumes directly from your browser.">
     <meta property="og:type" content="website">
@@ -25,11 +28,13 @@
     <meta property="og:site_name" content="LINS IO">
     <meta property="og:image" content="https://example.com/og-image.jpg">
     
+    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Resume Builder by LINS | Professional Resume Creator">
     <meta name="twitter:description" content="Create professional resumes instantly with Resume Builder by LINS. Choose premium templates, customize colors, export to PDF, PNG, and JPG, and build job-ready resumes directly from your browser.">
     <meta name="twitter:image" content="https://example.com/twitter-image.jpg">
 
+    <!-- Schema.org WebApplication JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -48,6 +53,7 @@
 
     <link rel="icon" type="image/png" href="logo.png">
     
+    <!-- Performance Improvements: Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -55,39 +61,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- html2canvas for JPG/PNG Export -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <!-- html2pdf for PDF Export -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
 
     <style>
+        /* Permanent Dark Theme Variables */
         :root {
-            --bg: #f8fafc;
-            --surface: #ffffff;
-            --surface-hover: #f1f5f9;
-            --surface-alt: #f1f5f9;
-            --border: #e2e8f0;
-            --border-focus: #cbd5e1;
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --text-light: #94a3b8;
-            --accent: #0f172a;
-            --danger: #ef4444;
-            --success: #10b981;
-            
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
-            --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-            
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 24px;
-            --radius-full: 9999px;
-
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Dark Mode Theme */
-        [data-theme="dark"] {
             --bg: #0f172a;
             --surface: #1e293b;
             --surface-hover: #334155;
@@ -97,17 +78,36 @@
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --text-light: #64748b;
+            
             --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
             --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+            
+            --accent: #2563eb;
+            --danger: #ef4444;
+            --success: #10b981;
+            
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Header Actions */
-        .theme-toggle {
-            background: transparent; border: none; color: var(--text-main); font-size: 1.25rem; cursor: pointer; padding: 8px; transition: var(--transition);
+        /* Custom Scrollbar for SaaS Feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
         }
-        .theme-toggle:hover { color: var(--accent); transform: scale(1.1); }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 10px;
+        }
 
         * {
             box-sizing: border-box;
@@ -133,7 +133,7 @@
             position: fixed;
             top: 0; left: 0; right: 0;
             height: 72px;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(30, 41, 59, 0.98);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             z-index: 100;
@@ -144,22 +144,11 @@
             border-bottom: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
         }
-        
-        /* Apply dynamic header background for dark mode if needed */
-        [data-theme="dark"] .header {
-            background: rgba(30, 41, 59, 0.98);
-        }
 
         .header-title {
             font-size: 1.125rem;
             font-weight: 700;
             letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        [data-theme="dark"] .header-title {
             background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -187,6 +176,7 @@
             transform-origin: 50% 50%;
         }
 
+        /* Mobile Tabs Layer */
         .tabs {
             position: fixed;
             top: 72px; left: 0; right: 0;
@@ -216,6 +206,7 @@
             box-shadow: var(--shadow-sm);
         }
 
+        /* Base Layout (Mobile First) */
         .main-content {
             margin-top: 128px;
             padding-bottom: 100px;
@@ -223,12 +214,101 @@
         }
 
         .view-section {
-            display: none;
+            display: none !important;
             animation: fadeIn 0.4s ease;
         }
 
-        .view-section.active {
-            display: block;
+        #editor-view.active {
+            display: block !important;
+        }
+        
+        #preview-view.active {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Desktop SaaS Split View */
+        @media (min-width: 1024px) {
+            .tabs {
+                display: none !important;
+            }
+            .main-content {
+                margin-top: 72px; /* Remove tab height gap */
+                padding-bottom: 0;
+                display: flex;
+                height: calc(100vh - 72px);
+                overflow: hidden; /* Prevent body scroll */
+            }
+            .view-section {
+                animation: none;
+            }
+            #editor-view {
+                display: block !important;
+                width: 450px;
+                flex-shrink: 0;
+                border-right: 1px solid var(--border);
+                background: var(--surface);
+                padding-bottom: 40px;
+                height: 100%;
+                overflow-y: auto;
+                position: relative;
+            }
+            #preview-view {
+                display: flex !important;
+                flex-grow: 1;
+                background: var(--surface-alt);
+                padding: 40px;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                height: 100%;
+                overflow-y: auto;
+            }
+            .preview-wrapper {
+                margin-bottom: 120px; /* Space for desktop floating toolbar */
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .fab-container {
+                position: fixed;
+                bottom: 32px;
+                left: calc(450px + (100vw - 450px) / 2); /* Center in right pane */
+                transform: translateX(-50%);
+                width: auto;
+                right: auto;
+                background: rgba(30, 41, 59, 0.85);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                padding: 10px 12px;
+                border-radius: var(--radius-full);
+                border: 1px solid var(--border);
+                box-shadow: var(--shadow-float);
+                display: flex;
+                gap: 12px;
+                z-index: 100;
+            }
+            .btn-primary {
+                padding: 12px 24px;
+                border-radius: var(--radius-full);
+                font-size: 0.9rem;
+                margin: 0;
+                box-shadow: none;
+            }
+            .copyright-footer {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                border-top: 1px solid var(--border);
+                padding: 16px;
+                z-index: 10;
+            }
+            #editor-view {
+                padding-bottom: 80px; /* Space for fixed footer */
+            }
         }
 
         /* Editor Styles */
@@ -315,10 +395,6 @@
 
         .form-control:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.05);
-        }
-        
-        [data-theme="dark"] .form-control:focus {
             box-shadow: 0 0 0 3px rgba(248, 250, 252, 0.1);
         }
 
@@ -338,14 +414,9 @@
             top: 8px;
             font-size: 0.65rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--text-main);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-        }
-        
-        [data-theme="dark"] .form-control:focus ~ .form-label,
-        [data-theme="dark"] .form-control:not(:placeholder-shown) ~ .form-label {
-            color: var(--text-main);
         }
 
         .form-control:not(:focus):not(:placeholder-shown) ~ .form-label {
@@ -440,11 +511,6 @@
         }
 
         .template-card.active {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 1px var(--accent);
-        }
-        
-        [data-theme="dark"] .template-card.active {
             border-color: var(--text-main);
             box-shadow: 0 0 0 1px var(--text-main);
         }
@@ -472,8 +538,8 @@
             right: 8px;
             width: 24px;
             height: 24px;
-            background: var(--accent);
-            color: white;
+            background: var(--text-main);
+            color: var(--bg);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -482,11 +548,6 @@
             opacity: 0;
             transform: scale(0.5);
             transition: var(--transition);
-        }
-        
-        [data-theme="dark"] .active-check {
-            background: var(--text-main);
-            color: var(--bg);
         }
 
         .template-card.active .active-check {
@@ -512,12 +573,8 @@
         }
 
         .color-btn.active {
-            box-shadow: 0 0 0 2px var(--accent);
-            transform: scale(1.1);
-        }
-        
-        [data-theme="dark"] .color-btn.active {
             box-shadow: 0 0 0 2px var(--text-main);
+            transform: scale(1.1);
         }
 
         /* Photo Upload */
@@ -580,13 +637,10 @@
             color: var(--text-main);
         }
 
-        /* Preview Area */
+        /* Preview Area Mobile defaults */
         #preview-view {
             background: var(--surface-alt);
             padding: 24px 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .preview-wrapper {
@@ -596,9 +650,6 @@
             display: flex;
             justify-content: center;
             margin-bottom: 80px;
-            /* Smooth scrollbar for webkit */
-            &::-webkit-scrollbar { height: 6px; }
-            &::-webkit-scrollbar-thumb { background: var(--border-focus); border-radius: 10px; }
         }
 
         .a4-container {
@@ -612,7 +663,7 @@
             overflow: hidden;
         }
 
-        /* Floating Action Button */
+        /* Floating Action Button (Mobile Defaults) */
         .fab-container {
             position: fixed;
             bottom: 24px;
@@ -643,6 +694,16 @@
 
         .btn-primary:active {
             transform: scale(0.98);
+        }
+
+        /* Footer Info */
+        .copyright-footer {
+            text-align: center;
+            padding: 32px 16px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
         }
 
         /* Modals & Overlays */
@@ -685,7 +746,7 @@
 
         .modal-icon {
             width: 64px; height: 64px;
-            background: #fef2f2;
+            background: rgba(239, 68, 68, 0.1);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             font-size: 24px; margin: 0 auto 20px;
@@ -729,11 +790,9 @@
 
         .loader {
             width: 48px; height: 48px; border: 3px solid var(--surface-alt);
-            border-top-color: var(--accent); border-radius: 50%;
+            border-top-color: var(--text-main); border-radius: 50%;
             animation: spin 1s linear infinite; margin-bottom: 16px;
         }
-        
-        [data-theme="dark"] .loader { border-top-color: var(--text-main); }
 
         /* Animations */
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -865,13 +924,16 @@
 </head>
 <body>
 
+    <!-- Loading Screen -->
     <div id="loading-screen">
         <div class="loader"></div>
         <h3 style="color: var(--text-muted); font-size: 1rem; font-weight: 500;">Starting Studio...</h3>
     </div>
 
+    <!-- Toasts -->
     <div id="toast-container"></div>
 
+    <!-- Modals -->
     <div class="overlay" id="confirm-modal">
         <div class="modal-card">
             <div class="modal-icon"><i class="fa-solid fa-trash"></i></div>
@@ -884,16 +946,14 @@
         </div>
     </div>
 
+    <!-- Header -->
     <header class="header">
         <div style="display:flex; align-items:center; gap: 12px;">
             <img src="logo.png" alt="LINS Logo" loading="lazy" style="height: 32px; width: auto; border-radius: 6px;" onerror="this.style.display='none'">
             <div class="header-title">Resume Builder by LINS</div>
         </div>
         <div class="progress-container">
-            <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()" title="Toggle Dark Mode">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-            <span class="progress-text" style="margin-left: 8px;"><span id="progress-val">0</span>%</span>
+            <span class="progress-text"><span id="progress-val">0</span>%</span>
             <svg class="progress-ring">
                 <circle cx="16" cy="16" r="14" fill="transparent" stroke="var(--border)" stroke-width="3"></circle>
                 <circle id="progress-circle" class="progress-ring-circle" cx="16" cy="16" r="14" fill="transparent" stroke="var(--accent)" stroke-width="3" stroke-dasharray="87.96" stroke-dashoffset="87.96"></circle>
@@ -901,15 +961,19 @@
         </div>
     </header>
 
+    <!-- Navigation (Mobile Only) -->
     <nav class="tabs">
         <button class="tab-btn active" data-target="editor-view">Edit Content</button>
         <button class="tab-btn" data-target="preview-view">Preview & Export</button>
     </nav>
 
+    <!-- Main Content -->
     <main class="main-content">
         
+        <!-- Editor View -->
         <section id="editor-view" class="view-section active">
             
+            <!-- Template & Design -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-wand-magic-sparkles" style="width:24px; color: var(--text-muted);"></i> Template & Design</span>
@@ -938,6 +1002,7 @@
                                 <div class="template-info">Elegant Exec</div>
                                 <div class="active-check"><i class="fa-solid fa-check"></i></div>
                             </div>
+                            <!-- Premium Templates -->
                             <div class="template-card" data-tpl="pro-sidebar" onclick="selectTemplate('pro-sidebar')">
                                 <div class="template-preview-mock" style="background:#1e293b; color:#fff;"><i class="fa-solid fa-table-columns"></i></div>
                                 <div class="template-info">Pro Sidebar <i class="fa-solid fa-star" style="color:var(--text-light);font-size:10px;"></i></div>
@@ -972,16 +1037,17 @@
                         
                         <h4 style="font-size: 0.875rem; margin-bottom: 12px; color: var(--text-muted); font-weight:600;">Accent Color</h4>
                         <div class="color-options">
-                            <div class="color-btn active" style="background: #0f172a;" onclick="selectColor('#0f172a', this)"></div>
-                            <div class="color-btn" style="background: #2563eb;" onclick="selectColor('#2563eb', this)"></div>
-                            <div class="color-btn" style="background: #0d9488;" onclick="selectColor('#0d9488', this)"></div>
-                            <div class="color-btn" style="background: #7c3aed;" onclick="selectColor('#7c3aed', this)"></div>
-                            <div class="color-btn" style="background: #ea580c;" onclick="selectColor('#ea580c', this)"></div>
+                            <div class="color-btn active" data-color="#2563eb" style="background: #2563eb;" onclick="selectColor('#2563eb', this)"></div>
+                            <div class="color-btn" data-color="#0d9488" style="background: #0d9488;" onclick="selectColor('#0d9488', this)"></div>
+                            <div class="color-btn" data-color="#7c3aed" style="background: #7c3aed;" onclick="selectColor('#7c3aed', this)"></div>
+                            <div class="color-btn" data-color="#ea580c" style="background: #ea580c;" onclick="selectColor('#ea580c', this)"></div>
+                            <div class="color-btn" data-color="#eab308" style="background: #eab308;" onclick="selectColor('#eab308', this)"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Personal Details -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-regular fa-user" style="width:24px; color: var(--text-muted);"></i> Personal Details</span>
@@ -1032,6 +1098,7 @@
                 </div>
             </div>
 
+            <!-- Professional Summary -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-regular fa-file-lines" style="width:24px; color: var(--text-muted);"></i> Professional Summary</span>
@@ -1047,6 +1114,7 @@
                 </div>
             </div>
 
+            <!-- Experience -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-briefcase" style="width:24px; color: var(--text-muted);"></i> Experience</span>
@@ -1060,6 +1128,7 @@
                 </div>
             </div>
 
+            <!-- Education -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-graduation-cap" style="width:24px; color: var(--text-muted);"></i> Education</span>
@@ -1073,6 +1142,7 @@
                 </div>
             </div>
 
+            <!-- Certifications -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-certificate" style="width:24px; color: var(--text-muted);"></i> Certifications (Optional)</span>
@@ -1086,6 +1156,7 @@
                 </div>
             </div>
 
+            <!-- Skills -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-bolt" style="width:24px; color: var(--text-muted);"></i> Skills</span>
@@ -1102,6 +1173,7 @@
                 </div>
             </div>
 
+            <!-- Languages -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-language" style="width:24px; color: var(--text-muted);"></i> Languages (Optional)</span>
@@ -1118,6 +1190,7 @@
                 </div>
             </div>
 
+            <!-- Hobbies -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-regular fa-heart" style="width:24px; color: var(--text-muted);"></i> Hobbies (Optional)</span>
@@ -1134,22 +1207,29 @@
                 </div>
             </div>
 
+            <!-- Copyright Footer -->
+            <div class="copyright-footer">
+                &copy; 2026 LINS IO. All rights reserved.
+            </div>
+
         </section>
 
+        <!-- Preview View -->
         <section id="preview-view" class="view-section">
             <div class="preview-wrapper" id="preview-wrapper">
                 <div class="a4-container tpl-minimal-ats" id="resume-document">
-                    </div>
+                    <!-- Dynamic Resume Content Injected Here -->
+                </div>
             </div>
             
-            <div class="fab-container" style="flex-wrap: wrap; justify-content: center; bottom: 16px;">
-                <button class="btn-primary" onclick="exportPDF()" style="background: var(--danger); font-size: 0.9rem; padding: 14px;">
+            <div class="fab-container">
+                <button class="btn-primary" onclick="exportPDF()" style="background: var(--danger); font-size: 0.9rem;">
                     <i class="fa-solid fa-file-pdf"></i> PDF
                 </button>
-                <button class="btn-primary" onclick="exportPNG()" style="background: var(--surface-alt); color: var(--text-main); border: 1px solid var(--border); font-size: 0.9rem; padding: 14px;">
+                <button class="btn-primary" onclick="exportPNG()" style="background: var(--surface-hover); color: var(--text-main); border: 1px solid var(--border); font-size: 0.9rem;">
                     <i class="fa-solid fa-image"></i> PNG
                 </button>
-                <button class="btn-primary" onclick="exportJPG()" style="background: var(--accent); font-size: 0.9rem; padding: 14px;">
+                <button class="btn-primary" onclick="exportJPG()" style="background: var(--accent); font-size: 0.9rem;">
                     <i class="fa-regular fa-image"></i> JPG
                 </button>
             </div>
@@ -1168,102 +1248,121 @@
             skills: [],
             languages: [],
             hobbies: [],
-            settings: { template: 'minimal-ats', color: '#0f172a' }
+            settings: { template: 'minimal-ats', color: '#2563eb' }
         });
 
-        let state = JSON.parse(localStorage.getItem('lins_io_resume')) || getEmptyState();
-        
-        // Backward compatibility for existing users
-        if(!state.certifications) state.certifications = [];
-        if(!state.languages) state.languages = [];
-        if(!state.hobbies) state.hobbies = [];
+        let state;
+        try {
+            const savedState = localStorage.getItem('lins_io_resume');
+            state = savedState ? JSON.parse(savedState) : getEmptyState();
+            
+            // Deep merge backward compatibility to prevent "undefined" errors
+            if (!state.personal) state.personal = getEmptyState().personal;
+            if (!state.summary) state.summary = getEmptyState().summary;
+            if (!state.experience) state.experience = [];
+            if (!state.education) state.education = [];
+            if (!state.certifications) state.certifications = [];
+            if (!state.skills) state.skills = [];
+            if (!state.languages) state.languages = [];
+            if (!state.hobbies) state.hobbies = [];
+            if (!state.settings) state.settings = getEmptyState().settings;
+            if (!state.settings.color) state.settings.color = '#2563eb';
+            if (!state.settings.template) state.settings.template = 'minimal-ats';
+        } catch (error) {
+            console.error("Local Storage Error. Loading fresh state.", error);
+            state = getEmptyState();
+        }
 
         let itemToDelete = null;
 
-        // --- Init ---
-        window.addEventListener('DOMContentLoaded', () => {
-            // Load saved theme
-            if(localStorage.getItem('lins_theme') === 'dark') toggleTheme();
-            
-            initUI();
-            bindInputs();
-            renderDynamicLists();
-            renderTagsAll();
-            updatePreview();
-            updateProgress();
-            
-            // Remove Loading Screen
-            setTimeout(() => {
-                const loader = document.getElementById('loading-screen');
-                loader.style.opacity = '0';
-                setTimeout(() => loader.remove(), 500);
-            }, 800);
+        // --- Core UI Logic ---
+        function initApp() {
+            try {
+                // Tabs (Mobile)
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                        document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
+                        
+                        e.target.classList.add('active');
+                        document.getElementById(e.target.dataset.target).classList.add('active');
+                        
+                        if(e.target.dataset.target === 'preview-view') {
+                            scalePreview();
+                        }
+                    });
+                });
 
-            // Responsive Scaling for A4
-            window.addEventListener('resize', scalePreview);
-            scalePreview();
-        });
+                // Accordions
+                document.querySelectorAll('.accordion-header').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const accordion = header.parentElement;
+                        const content = accordion.querySelector('.accordion-content');
+                        const isOpen = accordion.classList.contains('open');
+                        
+                        document.querySelectorAll('.accordion').forEach(acc => {
+                            acc.classList.remove('open');
+                            acc.querySelector('.accordion-content').style.maxHeight = null;
+                        });
+
+                        if (!isOpen) {
+                            accordion.classList.add('open');
+                            content.style.maxHeight = content.scrollHeight + 150 + "px"; // padding buffer
+                        }
+                    });
+                });
+
+                // Load saved settings (Templates & Colors)
+                selectTemplate(state.settings.template, false);
+                const colorBtn = document.querySelector(`.color-btn[data-color="${state.settings.color}"]`);
+                if(colorBtn) {
+                    selectColor(state.settings.color, colorBtn, false);
+                } else {
+                    const fallbackBtn = document.querySelector('.color-btn');
+                    if(fallbackBtn) selectColor('#2563eb', fallbackBtn, false);
+                }
+
+                // Load saved personal data to inputs
+                document.getElementById('pd-name').value = state.personal.name || '';
+                document.getElementById('pd-title').value = state.personal.jobTitle || '';
+                document.getElementById('pd-email').value = state.personal.email || '';
+                document.getElementById('pd-phone').value = state.personal.phone || '';
+                document.getElementById('pd-loc').value = state.personal.location || '';
+                document.getElementById('pd-link').value = state.personal.link || '';
+                document.getElementById('summary-text').value = state.summary.text || '';
+
+                if(state.personal.photo) {
+                    document.getElementById('photo-preview-ui').innerHTML = `<img src="${state.personal.photo}">`;
+                }
+
+                bindInputs();
+                renderDynamicLists();
+                renderTagsAll();
+                updatePreview();
+                updateProgress();
+
+                // Responsive Scaling for A4
+                window.addEventListener('resize', scalePreview);
+                scalePreview();
+
+            } catch (err) {
+                console.error("Initialization Failed:", err);
+            } finally {
+                // Ensure the loading screen is ALWAYS removed even if an error occurs
+                setTimeout(() => {
+                    const loader = document.getElementById('loading-screen');
+                    if(loader) {
+                        loader.style.opacity = '0';
+                        setTimeout(() => loader.remove(), 500);
+                    }
+                }, 400);
+            }
+        }
 
         function saveState() {
             localStorage.setItem('lins_io_resume', JSON.stringify(state));
             updatePreview();
             updateProgress();
-        }
-
-        // --- Core UI Logic ---
-        function initUI() {
-            // Tabs
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                    document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
-                    
-                    e.target.classList.add('active');
-                    document.getElementById(e.target.dataset.target).classList.add('active');
-                    
-                    if(e.target.dataset.target === 'preview-view') {
-                        scalePreview();
-                    }
-                });
-            });
-
-            // Accordions
-            document.querySelectorAll('.accordion-header').forEach(header => {
-                header.addEventListener('click', () => {
-                    const accordion = header.parentElement;
-                    const content = accordion.querySelector('.accordion-content');
-                    const isOpen = accordion.classList.contains('open');
-                    
-                    document.querySelectorAll('.accordion').forEach(acc => {
-                        acc.classList.remove('open');
-                        acc.querySelector('.accordion-content').style.maxHeight = null;
-                    });
-
-                    if (!isOpen) {
-                        accordion.classList.add('open');
-                        content.style.maxHeight = content.scrollHeight + 150 + "px"; // padding buffer
-                    }
-                });
-            });
-
-            // Load saved settings
-            selectTemplate(state.settings.template, false);
-            
-            const colorBtn = document.querySelector(`.color-btn[style*="${state.settings.color}"]`);
-            if(colorBtn) selectColor(state.settings.color, colorBtn, false);
-
-            // Load saved personal data to inputs
-            document.getElementById('pd-name').value = state.personal.name || '';
-            document.getElementById('pd-title').value = state.personal.jobTitle || '';
-            document.getElementById('pd-email').value = state.personal.email || '';
-            document.getElementById('pd-phone').value = state.personal.phone || '';
-            document.getElementById('pd-loc').value = state.personal.location || '';
-            document.getElementById('pd-link').value = state.personal.link || '';
-            document.getElementById('summary-text').value = state.summary.text || '';
-
-            if(state.personal.photo) {
-                document.getElementById('photo-preview-ui').innerHTML = `<img src="${state.personal.photo}">`;
-            }
         }
 
         function bindInputs() {
@@ -1323,7 +1422,7 @@
                 img.onload = () => {
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
-                    const maxSize = 250; // Increased quality slightly for premium
+                    const maxSize = 250; 
                     let width = img.width;
                     let height = img.height;
 
@@ -1741,14 +1840,14 @@
             doc.innerHTML = html;
         }
 
-        // Scale preview for mobile screens
+        // Scale preview for screens
         function scalePreview() {
             const wrapper = document.getElementById('preview-wrapper');
             const container = document.getElementById('resume-document');
-            if(wrapper.offsetWidth === 0) return; // Hidden
+            if(wrapper.offsetWidth === 0) return; // Hidden on mobile tab
             
             const A4_WIDTH_PX = 794; // approx width of 210mm at 96dpi
-            const padding = 32;
+            const padding = window.innerWidth >= 1024 ? 64 : 32; // Breathing room
             const availableWidth = wrapper.offsetWidth - padding;
             
             if(availableWidth < A4_WIDTH_PX) {
@@ -1758,21 +1857,6 @@
             } else {
                 container.style.transform = `scale(1)`;
                 wrapper.style.height = `auto`;
-            }
-        }
-
-        // --- Dark Mode System ---
-        function toggleTheme() {
-            const isDark = document.body.getAttribute('data-theme') === 'dark';
-            const themeBtn = document.getElementById('theme-btn');
-            if (isDark) {
-                document.body.removeAttribute('data-theme');
-                localStorage.setItem('lins_theme', 'light');
-                themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-            } else {
-                document.body.setAttribute('data-theme', 'dark');
-                localStorage.setItem('lins_theme', 'dark');
-                themeBtn.innerHTML = '<i class="fa-solid fa-sun" style="color: #eab308;"></i>';
             }
         }
 
@@ -1894,6 +1978,9 @@
                 console.error("PDF failed:", err);
             });
         }
+
+        // --- Run App Initialization ---
+        initApp();
     </script>
 </body>
 </html>
