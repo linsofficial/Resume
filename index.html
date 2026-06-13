@@ -1,20 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Resume Builder by LINS</title>
+    
+    <title>Resume Builder by LINS | Professional Resume Creator</title>
+    <meta name="description" content="Create professional resumes instantly with Resume Builder by LINS. Choose premium templates, customize colors, export to PDF, PNG, and JPG, and build job-ready resumes directly from your browser.">
+    <meta name="keywords" content="resume builder,resume maker,cv builder,cv maker,professional resume,resume creator,job resume,resume templates,pdf resume,resume generator,resume design,cv creator,online resume,resume export,lins io">
+    <meta name="author" content="LINS IO">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://example.com/resume-builder">
+    
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="LINS Resume">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="LINS Resume">
+    
+    <meta property="og:title" content="Resume Builder by LINS | Professional Resume Creator">
+    <meta property="og:description" content="Create professional resumes instantly with Resume Builder by LINS. Choose premium templates, customize colors, export to PDF, PNG, and JPG, and build job-ready resumes directly from your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/resume-builder">
+    <meta property="og:site_name" content="LINS IO">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resume Builder by LINS | Professional Resume Creator">
+    <meta name="twitter:description" content="Create professional resumes instantly with Resume Builder by LINS. Choose premium templates, customize colors, export to PDF, PNG, and JPG, and build job-ready resumes directly from your browser.">
+    <meta name="twitter:image" content="https://example.com/twitter-image.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Resume Builder by LINS",
+      "url": "https://example.com/resume-builder",
+      "description": "Create professional resumes instantly with Resume Builder by LINS. Choose premium templates, customize colors, export to PDF, PNG, and JPG, and build job-ready resumes directly from your browser.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "author": {
+        "@type": "Organization",
+        "name": "LINS IO"
+      }
+    }
+    </script>
+
     <link rel="icon" type="image/png" href="logo.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- html2canvas for JPG/PNG Export -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <!-- html2pdf for PDF Export -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
 
     <style>
         :root {
@@ -61,29 +103,7 @@
             --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
         }
 
-        /* AI Buttons & Header Actions */
-        .ai-btn {
-            background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
-            color: white;
-            border: none;
-            padding: 10px 16px;
-            border-radius: var(--radius-md);
-            font-size: 0.8rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-            box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.3);
-            margin-bottom: 16px;
-            width: 100%;
-            justify-content: center;
-        }
-        .ai-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.4);
-        }
+        /* Header Actions */
         .theme-toggle {
             background: transparent; border: none; color: var(--text-main); font-size: 1.25rem; cursor: pointer; padding: 8px; transition: var(--transition);
         }
@@ -845,16 +865,13 @@
 </head>
 <body>
 
-    <!-- Loading Screen -->
     <div id="loading-screen">
         <div class="loader"></div>
         <h3 style="color: var(--text-muted); font-size: 1rem; font-weight: 500;">Starting Studio...</h3>
     </div>
 
-    <!-- Toasts -->
     <div id="toast-container"></div>
 
-    <!-- Modals -->
     <div class="overlay" id="confirm-modal">
         <div class="modal-card">
             <div class="modal-icon"><i class="fa-solid fa-trash"></i></div>
@@ -867,10 +884,9 @@
         </div>
     </div>
 
-    <!-- Header -->
     <header class="header">
         <div style="display:flex; align-items:center; gap: 12px;">
-            <img src="logo.png" alt="LINS Logo" style="height: 32px; width: auto; border-radius: 6px;" onerror="this.style.display='none'">
+            <img src="logo.png" alt="LINS Logo" loading="lazy" style="height: 32px; width: auto; border-radius: 6px;" onerror="this.style.display='none'">
             <div class="header-title">Resume Builder by LINS</div>
         </div>
         <div class="progress-container">
@@ -885,19 +901,15 @@
         </div>
     </header>
 
-    <!-- Navigation -->
     <nav class="tabs">
         <button class="tab-btn active" data-target="editor-view">Edit Content</button>
         <button class="tab-btn" data-target="preview-view">Preview & Export</button>
     </nav>
 
-    <!-- Main Content -->
     <main class="main-content">
         
-        <!-- Editor View -->
         <section id="editor-view" class="view-section active">
             
-            <!-- Template & Design -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-wand-magic-sparkles" style="width:24px; color: var(--text-muted);"></i> Template & Design</span>
@@ -926,7 +938,6 @@
                                 <div class="template-info">Elegant Exec</div>
                                 <div class="active-check"><i class="fa-solid fa-check"></i></div>
                             </div>
-                            <!-- Premium Templates -->
                             <div class="template-card" data-tpl="pro-sidebar" onclick="selectTemplate('pro-sidebar')">
                                 <div class="template-preview-mock" style="background:#1e293b; color:#fff;"><i class="fa-solid fa-table-columns"></i></div>
                                 <div class="template-info">Pro Sidebar <i class="fa-solid fa-star" style="color:var(--text-light);font-size:10px;"></i></div>
@@ -971,7 +982,6 @@
                 </div>
             </div>
 
-            <!-- Personal Details -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-regular fa-user" style="width:24px; color: var(--text-muted);"></i> Personal Details</span>
@@ -1022,7 +1032,6 @@
                 </div>
             </div>
 
-            <!-- Professional Summary -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-regular fa-file-lines" style="width:24px; color: var(--text-muted);"></i> Professional Summary</span>
@@ -1030,7 +1039,6 @@
                 </button>
                 <div class="accordion-content">
                     <div class="accordion-inner">
-                        <button class="ai-btn" onclick="triggerAI('summary')"><i class="fa-solid fa-sparkles"></i> Generate AI Summary</button>
                         <div class="form-group" style="margin-bottom:0;">
                             <textarea class="form-control" id="summary-text" placeholder=" " data-sec="summary" data-field="text"></textarea>
                             <label class="form-label">Summary</label>
@@ -1039,7 +1047,6 @@
                 </div>
             </div>
 
-            <!-- Experience -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-briefcase" style="width:24px; color: var(--text-muted);"></i> Experience</span>
@@ -1053,7 +1060,6 @@
                 </div>
             </div>
 
-            <!-- Education -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-graduation-cap" style="width:24px; color: var(--text-muted);"></i> Education</span>
@@ -1067,7 +1073,6 @@
                 </div>
             </div>
 
-            <!-- Certifications (NEW) -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-certificate" style="width:24px; color: var(--text-muted);"></i> Certifications (Optional)</span>
@@ -1081,7 +1086,6 @@
                 </div>
             </div>
 
-            <!-- Skills -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-bolt" style="width:24px; color: var(--text-muted);"></i> Skills</span>
@@ -1093,13 +1097,11 @@
                             <input type="text" class="form-control" id="skill-input" placeholder=" " onkeypress="handleTagEnter(event, 'skills')">
                             <label class="form-label">Add a skill (Press Enter)</label>
                         </div>
-                        <button class="ai-btn" onclick="triggerAI('skills')" style="margin-top: 12px;"><i class="fa-solid fa-sparkles"></i> AI Skill Suggestions</button>
                         <div class="res-skills-list" id="skills-pill-container" style="margin-top: 16px;"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Languages (NEW) -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-solid fa-language" style="width:24px; color: var(--text-muted);"></i> Languages (Optional)</span>
@@ -1116,7 +1118,6 @@
                 </div>
             </div>
 
-            <!-- Hobbies (NEW) -->
             <div class="accordion">
                 <button class="accordion-header">
                     <span><i class="fa-regular fa-heart" style="width:24px; color: var(--text-muted);"></i> Hobbies (Optional)</span>
@@ -1135,12 +1136,10 @@
 
         </section>
 
-        <!-- Preview View -->
         <section id="preview-view" class="view-section">
             <div class="preview-wrapper" id="preview-wrapper">
                 <div class="a4-container tpl-minimal-ats" id="resume-document">
-                    <!-- Dynamic Resume Content Injected Here -->
-                </div>
+                    </div>
             </div>
             
             <div class="fab-container" style="flex-wrap: wrap; justify-content: center; bottom: 16px;">
@@ -1775,11 +1774,6 @@
                 localStorage.setItem('lins_theme', 'dark');
                 themeBtn.innerHTML = '<i class="fa-solid fa-sun" style="color: #eab308;"></i>';
             }
-        }
-
-        // --- AI System Placeholders ---
-        function triggerAI(type) {
-            alert("Connect your AI API here");
         }
 
         // --- Export Systems ---
